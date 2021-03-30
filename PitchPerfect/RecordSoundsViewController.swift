@@ -29,7 +29,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     
     
     @IBAction func recordAudio(_ sender: Any) {
-        print("record button was pressed")
+//        print("record button was pressed")
         recordingLabel.text = "Recording in Progress"
         stopRecordingButton.isEnabled = true
         recordButton.isEnabled = false
@@ -39,7 +39,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         let recordingName = "recordedVoice.wav"
         let pathArray = [dirPath, recordingName]
         let filePath = URL(string: pathArray.joined(separator: "/"))
-        print(filePath)
+//        print(filePath)
         let session = AVAudioSession.sharedInstance()
         try! session.setCategory(AVAudioSession.Category.playAndRecord, mode: AVAudioSession.Mode.default, options: AVAudioSession.CategoryOptions.defaultToSpeaker)
 
